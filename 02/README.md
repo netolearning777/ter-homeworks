@@ -75,7 +75,7 @@ resource "yandex_compute_instance" "platform" {
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
-[output.tf]()
+[output.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/outputs.tf)
 
 <em>
 netology-develop-platform-web "external_ip" = "62.84.117.120"
@@ -89,7 +89,7 @@ netology-develop-platform-db "external_ip" = ""
 2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
 3. Примените изменения.
 
-[locals.tf]()
+[locals.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/locals.tf)
 
 ### Задание 6
 
