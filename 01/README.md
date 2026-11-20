@@ -55,7 +55,7 @@
 [**ссылка на main.tf**](https://github.com/netolearning777/git-terraform-hw/blob/main/01/main.tf)
 
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/01/img/VirtualBox_ubuntu-desktop-24_05_11_2026_15_58_50.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/01/img/VirtualBox_ubuntu-desktop-24_05_11_2026_15_58_50.png)
 
 7. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
@@ -68,7 +68,7 @@
 
 Использование ```terraform apply -auto-approve``` оправдано только при автоматических CI/CD конвейерах.
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/01/img/VirtualBox_ubuntu-desktop-24_06_11_2026_13_14_40.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/01/img/VirtualBox_ubuntu-desktop-24_06_11_2026_13_14_40.png)
 
 </em>
 
