@@ -129,7 +129,7 @@ netology-develop-platform-db "external_ip" = ""
 
 [main.tf()](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/main.tf)
 
-[vms_platform.tf]()
+[vms_platform.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/vms_platform.tf)
 
 ![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-20_09-22-31.png)
 
