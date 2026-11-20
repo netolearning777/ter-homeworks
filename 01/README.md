@@ -52,7 +52,7 @@
 
 6. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
-[**ссылка на main.tf**](https://github.com/netolearning777/git-terraform-hw/blob/main/01/main.tf)
+[**ссылка на main.tf**](https://github.com/netolearning777/ter-homeworks/blob/main/01/main.tf)
 
 
 ![](https://github.com/netolearning777/ter-homeworks/blob/main/01/img/VirtualBox_ubuntu-desktop-24_05_11_2026_15_58_50.png)
