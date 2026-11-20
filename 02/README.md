@@ -62,7 +62,7 @@ resource "yandex_compute_instance" "platform" {
 
 [main.tf()](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/main.tf)
 
-[variables.tf]()
+[variables.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/variables.tf)
 
 [vms_platform.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/vms_platform.tf)
 
