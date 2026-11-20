@@ -60,7 +60,7 @@ resource "yandex_compute_instance" "platform" {
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
-[main.tf]()
+[main.tf()](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/main.tf)
 
 [variables.tf]()
 
@@ -127,7 +127,7 @@ netology-develop-platform-db "external_ip" = ""
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
 6. Проверьте terraform plan. Изменений быть не должно.
 
-[main.tf]()
+[main.tf()](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/main.tf)
 
 [vms_platform.tf]()
 
