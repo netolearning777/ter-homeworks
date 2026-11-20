@@ -31,13 +31,12 @@ resource "yandex_compute_instance" "platform" {
 
 ![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-18_14-38-47.png)
 
-
-6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
+5. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 
 ![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/VirtualBox_ubuntu-desktop-24_18_11_2026_14_44_32.png)
 
-8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
+6. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
 
 <em>
 Параметры preemptible = true (прерываемая ВМ) и core_fraction = 5 (гарантированная доля vCPU 5%) — это способ снизить стоимость виртуальной машины.
@@ -51,7 +50,9 @@ resource "yandex_compute_instance" "platform" {
 
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
-3. Проверьте terraform plan. Изменений быть не должно. 
+3. Проверьте terraform plan. Изменений быть не должно.
+
+[vms_platform.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/vms_platform.tf)
 
 ### Задание 3
 
@@ -63,7 +64,7 @@ resource "yandex_compute_instance" "platform" {
 
 [variables.tf]()
 
-[vms_platform.tf]()
+[vms_platform.tf](https://github.com/netolearning777/ter-homeworks/blob/main/02/src/vms_platform.tf)
 
 ![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-19_14-02-22.png)
 
