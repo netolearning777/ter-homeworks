@@ -35,7 +35,7 @@ resource "yandex_compute_instance" "platform" {
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/VirtualBox_ubuntu-desktop-24_18_11_2026_14_44_32.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/VirtualBox_ubuntu-desktop-24_18_11_2026_14_44_32.png)
 
 8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
 
@@ -65,7 +65,7 @@ resource "yandex_compute_instance" "platform" {
 
 [vms_platform.tf]()
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-19_14-02-22.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-19_14-02-22.png)
 
 ### Задание 4
 
@@ -130,8 +130,8 @@ netology-develop-platform-db "external_ip" = ""
 
 [vms_platform.tf]()
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-20_09-22-31.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-20_09-22-31.png)
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/VirtualBox_ubuntu-desktop-24_20_11_2026_09_22_48.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/VirtualBox_ubuntu-desktop-24_20_11_2026_09_22_48.png)
 
 ------
