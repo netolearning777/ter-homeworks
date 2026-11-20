@@ -29,7 +29,7 @@ resource "yandex_compute_instance" "platform" {
 
 </em>
 
-![](https://github.com/netolearning777/git-terraform-hw/blob/main/02/img/2026-11-18_14-38-47.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/main/02/img/2026-11-18_14-38-47.png)
 
 
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
