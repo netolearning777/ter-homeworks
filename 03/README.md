@@ -7,7 +7,7 @@
 
 Приложите скриншот входящих правил «Группы безопасности» в ЛК Yandex Cloud .
 
-![](ter-homeworks/03/img/2026-11-20_14-29-46.png)
+![](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/img/2026-11-20_14-29-46.png)
 
 ------
 
@@ -20,9 +20,18 @@ variable "each_vm" {
   type = list(object({  vm_name=string, cpu=number, ram=number, disk_volume=number }))
 }
 ```
+
+[count-vm.tf](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/src/count-vm.tf)
+
+[for_each-vm.tf](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/src/for_each-vm.tf)
+
+
 При желании внесите в переменную все возможные параметры.
+
 3. ВМ, описанные в файле count-vm.tf, должны создаваться после ВМ, описанных в файле for_each-vm.tf.
+
 4. Используйте функцию file в local-переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ 2.
+
 5. Инициализируйте проект, выполните код.
 
 ------
@@ -32,7 +41,7 @@ variable "each_vm" {
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
 2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage"  . Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
 
-[disk_vm.tf]()
+[disk_vm.tf](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/src/disk_vm.tf)
 
 ------
 
@@ -57,7 +66,14 @@ replica ansible_host<внешний ip-адрес> fqdn=<полное домен
 storage ansible_host=<внешний ip-адрес> fqdn=<полное доменное имя виртуальной машины>
 ```
 Пример fqdn: ```web1.ru-central1.internal```(в случае указания переменной hostname(не путать с переменной name)); ```fhm8k1oojmm5lie8i22a.auto.internal```(в случае отсутвия перменной hostname - автоматическая генерация имени,  зона изменяется на auto). нужную вам переменную найдите в документации провайдера или terraform console.
-4. Выполните код. Приложите скриншот получившегося файла. 
+
+[ansible.tf](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/src/ansible.tf)
+
+[inventory.tftpl](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/src/inventory.tftpl)
+
+4. Выполните код. Приложите скриншот получившегося файла.
+
+![](https://github.com/netolearning777/ter-homeworks/blob/terraform-03/03/img/VirtualBox_ubuntu-desktop-24_24_11_2026_10_48_59.png)
 
 Для общего зачёта создайте в вашем GitHub-репозитории новую ветку terraform-03. Закоммитьте в эту ветку свой финальный код проекта, пришлите ссылку на коммит.
 **Удалите все созданные ресурсы**.
