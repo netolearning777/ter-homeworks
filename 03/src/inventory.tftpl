@@ -1,0 +1,20 @@
+[webservers]
+%{ for vm in web_vms ~}
+${vm.name} ansible_host=${vm.network_interface[0].nat_ip_address} internal_ip=${vm.network_interface[0].ip_address} fqdn=${vm.fqdn}
+%{ endfor ~}
+
+[databases]
+%{ for vm in db_vms ~}
+${vm.name} ansible_host=${vm.network_interface[0].nat_ip_address != "" ? vm.network_interface[0].nat_ip_address : vm.network_interface[0].ip_address} fqdn=${vm.fqdn}%{ if vm.network_interface[0].nat_ip_address == "" && length(web_vms) > 0 } ansible_ssh_common_args='-o StrictHostKeyChecking=no -o ProxyJump=${ssh_user}@${web_vms[0].network_interface[0].nat_ip_address}'%{ endif }
+%{ endfor ~}
+
+[storage]
+%{ for vm in storage_vms ~}
+${vm.name} ansible_host=${vm.network_interface[0].nat_ip_address != "" ? vm.network_interface[0].nat_ip_address : vm.network_interface[0].ip_address} fqdn=${vm.fqdn}%{ if vm.network_interface[0].nat_ip_address == "" && length(web_vms) > 0 } ansible_ssh_common_args='-o StrictHostKeyChecking=no -o ProxyJump=${ssh_user}@${web_vms[0].network_interface[0].nat_ip_address}'%{ endif }
+%{ endfor ~}
+
+[all:vars]
+ansible_user=${ssh_user}
+ansible_ssh_private_key_file=${ssh_key_path}
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+

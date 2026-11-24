@@ -30,3 +30,17 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+variable "vms_metadata" {
+  type = map(object({
+    serial-port-enable = number
+    ssh-keys           = string
+  }))
+  default = {
+    common = {
+      serial-port-enable = 1
+      ssh-keys           = "" # Оставляем пустым или ставим заглушку, так как ключ подтянется из locals
+    }
+  }
+  description = "Общие метаданные для всех виртуальных машин"
+}
+
